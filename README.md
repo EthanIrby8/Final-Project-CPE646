@@ -2,12 +2,12 @@
 Improving model learning to accurately predict respiratory illness
 
 ## Table of Contents 
-- Motivation
+- Brief Introduction
 - Technologies
 - Model Architecture(s)
 - Compile and Run
 
-### Motivation
+### Introduction
 This project aims to develop and test different machine learning models to enhance natural image classification performance. The project aims to improve performance of model prediciton likelihood of pneumonia using chest x-ray images. Minimal preprocessing was applied with the hope of reducing computational complexity. 
 
 The notebook was created for submission as a Final Project to a Pattern Recognition & Classification course. All data was assembled from kaggle.com. For more than a small introduction to the overview of the project, please read (pages document). Links to the data repositories and journal articles will be attached at the end of this document. 
