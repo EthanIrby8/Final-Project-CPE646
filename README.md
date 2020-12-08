@@ -36,3 +36,17 @@ In order to achieve a robust model with less layers and proneness to overfitting
 "Model 2" (DNN)
 insert image of model summary
 
+
+
+
+
+### Compile and Run
+
+Each model is saved to a HDF5 file, thanks to Keras. Loading a model on your own machine just requires you to have tensorflow and keras installed. Versions of tensorflow >= 1.14.0 will work just fine. 
+
+Each model has been saved using tensorflow's model.save method. The model's weights, architecture, and training configuration has all been stored in one file. Any access to re-create the original code is not required to load model.  
+
+Here are quick and easy steps to follow:
+1) Import necessary libraries
+2) new_model = tf.keras.models.load_model("Model 1-32x3-CNN_v2.h5") or ('Model 2-32x3-DNN.h5')
+
