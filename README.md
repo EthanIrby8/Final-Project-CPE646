@@ -32,7 +32,7 @@ Once all of the data had been loaded and processed to satisfy Keras API requirem
 
 "Model 1" achieved a training accuracy ~98.5% and a validation accuracy of ~79.75%. The major difference in accuracies is an indicator that the model has over-fit to the training data. 
 
-In order to achieve a robust model with less layers and proneness to overfitting, a dense neural network is constructed. A few changes to note first. To improve model performance with some hyper-parameter tuning, l2 regularization is added to two dense layers. This should help with penalizing the large number of weights being passed through the network, subsequently taming the amount of computational power. Additionally, dropout layers are placed in between dense layers to shutdown randomly picked nodes within the hidden layers of the network. This technique helps in reducing the risk of the model overfitting the training data. The dense neural network is referred to as "Model 2".   
+In order to achieve a robust model with less layers and susceptibility to overfitting, a dense neural network is constructed. A few changes to note first. To improve model performance with some hyper-parameter tuning, l2 regularization is added to two dense layers. This should help with penalizing the large number of weights being passed through the network, subsequently taming the amount of computational power. Additionally, dropout layers are placed in between dense layers to shutdown randomly picked nodes within the hidden layers of the network. This technique helps in reducing the risk of the model overfitting the training data. The dense neural network is referred to as "Model 2".   
 
 "Model 2" (DNN)
 insert image of model summary
@@ -49,5 +49,5 @@ Each model has been saved using tensorflow's model.save method. The model's weig
 
 Here are quick and easy steps to follow:
 1) Import necessary libraries
-2) new_model = tf.keras.models.load_model("Model 1-32x3-CNN_v2.h5") or ('Model 2-32x3-DNN.h5')
+2) new_model = tf.keras.models.load_model("Model 1-32x3-CNN_v2.hdf5") or ('Model 2-32x3-DNN.hdf5')
 
