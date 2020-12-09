@@ -24,7 +24,7 @@ Analyzing the available data did not take much effort as inferring the potential
 
 The chest x-ray is of a patient labeled as having pneumonia. Notice the white fog that inhabits the middle of the chest. This feature is what we really want the network to detect. Notice the presence of the diaphragm occupying the bottom of the x-ray.  
 
-Once all of the data had been loaded and processed to satisfy Keras API requirements (see https://keras.io/api/models/model/), model development begun. The first model aligned with a convolutional neural network (CNN) structure. The goal here was to devise a traditional CNN that boasted several layers without too much overfitting reduction algorithms applied. Many studies typically use convolutional neural networks for detecting and classifying lung disease cases using chest x-ray images. Since this is the case, a CNN was constructed as a base-model to which a smaller and fully connected model can be compared against based upon accuracy and loss metrics.  
+Once all of the data had been loaded and processed to satisfy Keras API requirements (see https://keras.io/api/models/model/), model development went underway. The first model aligned with a convolutional neural network (CNN) structure. The goal here was to devise a traditional CNN that boasted several layers without too much overfitting reduction algorithms applied. Many studies typically use convolutional neural networks for detecting and classifying lung disease cases using chest x-ray images. Since this is the case, a CNN was constructed as a base-model to which a smaller and fully connected model can be compared against based upon accuracy and loss metrics.  
 
 "Model 1" (CNN)
 
@@ -43,11 +43,14 @@ insert image of model summary
 
 ### Compile and Run
 
-Each model is saved to a HDF5 file, thanks to Keras. Loading a model on your own machine just requires you to have tensorflow and keras installed. Versions of tensorflow >= 1.14.0 will work just fine. 
+Each model is saved to a HDF5 file, thanks to Keras. HDF stands for Hierarchical Data Format. HDF5 uses a file directory to organize data within that file and ensure long-term access to the large amounts of data stored within the file. Loading a model on your own machine just requires you to have tensorflow and keras installed. Versions of tensorflow >= 1.14.0 will work just fine. 
 
 Each model has been saved using tensorflow's model.save method. The model's weights, architecture, and training configuration has all been stored in one file. Any access to re-create the original code is not required to load model.  
 
 Here are quick and easy steps to follow:
 1) Import necessary libraries
 2) new_model = tf.keras.models.load_model("Model 1-32x3-CNN_v2.hdf5") or ('Model 2-32x3-DNN.hdf5')
+3) new_model.summary() # View the layers and parameters of either model
+
+And that's it! Train or make predictions on images of your choosing.   
 
