@@ -27,9 +27,10 @@ The chest x-ray is of a patient labeled as having pneumonia. Notice the white fo
 Once all of the data had been loaded and processed to satisfy Keras API requirements (see https://keras.io/api/models/model/), model development begun. The first model aligned with a convolutional neural network (CNN) structure. The goal here was to devise a traditional CNN that boasted several layers without too much overfitting reduction algorithms applied. Many studies typically use convolutional neural networks for detecting and classifying lung disease cases using chest x-ray images. Since this is the case, a CNN was constructed as a base-model to which a smaller and fully connected model can be compared against based upon accuracy and loss metrics.  
 
 "Model 1" (CNN)
-insert image of model summary
 
-"Model 1" achieved a training accuracy ~99.5% and a validation accuracy of ~76%. The major difference in accuracies is an indicator that the model overfitted the training data. 
+<img width="599" alt="Screen Shot 2020-12-09 at 11 00 51 AM" src="https://user-images.githubusercontent.com/63656931/101654712-ab618d80-39f5-11eb-9b26-fad4e94862c0.png">
+
+"Model 1" achieved a training accuracy ~98.5% and a validation accuracy of ~79.75%. The major difference in accuracies is an indicator that the model has over-fit to the training data. 
 
 In order to achieve a robust model with less layers and proneness to overfitting, a dense neural network is constructed. A few changes to note first. To improve model performance with some hyper-parameter tuning, l2 regularization is added to two dense layers. This should help with penalizing the large number of weights being passed through the network, subsequently taming the amount of computational power. Additionally, dropout layers are placed in between dense layers to shutdown randomly picked nodes within the hidden layers of the network. This technique helps in reducing the risk of the model overfitting the training data. The dense neural network is referred to as "Model 2".   
 
