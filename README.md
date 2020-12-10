@@ -30,7 +30,7 @@ Once all of the data had been loaded and processed to satisfy Keras API requirem
 
 <img width="598" alt="Screen Shot 2020-12-10 at 2 39 26 PM" src="https://user-images.githubusercontent.com/63656931/101821177-77ad6300-3adc-11eb-90cc-570405e932bb.png">
 
-"Model 1" achieved a training accuracy ~98.5% and a validation accuracy of ~79.75%. The major difference in accuracies is an indicator that the model has over-fit to the training data. 
+After training for only 20 epochs, "Model 1" reached a training accuracy of ~96.6% and a validation accuracy of ~90.65%. 
 
 <img width="184" alt="Screen Shot 2020-12-10 at 2 46 11 PM" src="https://user-images.githubusercontent.com/63656931/101821817-5731d880-3add-11eb-9e2c-58b568730a5f.png">
 
