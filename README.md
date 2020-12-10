@@ -32,6 +32,10 @@ Once all of the data had been loaded and processed to satisfy Keras API requirem
 
 "Model 1" achieved a training accuracy ~98.5% and a validation accuracy of ~79.75%. The major difference in accuracies is an indicator that the model has over-fit to the training data. 
 
+<img width="185" alt="Screen Shot 2020-12-09 at 12 39 22 PM" src="https://user-images.githubusercontent.com/63656931/101665978-7f003e00-3a02-11eb-957b-0ab0716422ee.png">
+
+The confusion matrix above connects the model performance to it's real-life implications. The bottom right box in the matrix represents the number of correct 'true negative' classifications. Meaning, a given image was classified as not belonging to the other class. A 'NORMAL' x-ray is not a 'PNEUMONIA' x-ray. 
+
 In order to achieve a robust model with less layers and susceptibility to overfitting, a dense neural network is constructed. A few changes to note first. To improve model performance with some hyper-parameter tuning, l2 regularization is added to two dense layers. This should help with penalizing the large number of weights being passed through the network, subsequently taming the amount of computational power. Additionally, dropout layers are placed in between dense layers to shutdown randomly picked nodes within the hidden layers of the network. This technique helps in reducing the risk of the model overfitting the training data. The dense neural network is referred to as "Model 2".   
 
 "Model 2" (DNN)
@@ -45,12 +49,13 @@ insert image of model summary
 
 Each model is saved to a HDF5 file, thanks to Keras. HDF stands for Hierarchical Data Format. HDF5 uses a file directory to organize data within that file and ensure long-term access to the large amounts of data stored within the file. Loading a model on your own machine just requires you to have tensorflow and keras installed. Versions of tensorflow >= 1.14.0 will work just fine. 
 
-Each model has been saved using tensorflow's model.save method. The model's weights, architecture, and training configuration has all been stored in one file. Any access to re-create the original code is not required to load model.  
+Each model has been saved using tensorflow's model.save method. The model's weights, architecture, and training configuration has all been stored in one file. The original source code to re-create the model is not required as loading the model using the below statements below is sufficient.  
 
-Here are quick and easy steps to follow:
-1) Import necessary libraries
+Here are some quick and easy steps to load the model:
+1) Import keras and tensorflow libraries 
 2) new_model = tf.keras.models.load_model("Model 1-32x3-CNN_v2.hdf5") or ('Model 2-32x3-DNN.hdf5')
 3) new_model.summary() # View the layers and parameters of either model
+4) call new_model.fit to train the model on data of your choice
 
-And that's it! Train or make predictions on images of your choosing.   
+Since the optimizer and its state are saved as well, training will restart from where it left off. Make predictions and evaluate the model on images of your choosing.   
 
