@@ -47,13 +47,13 @@ insert image of model summary
 
 ### Compile and Run
 
-Each model is saved to a HDF5 file, thanks to Keras. HDF stands for Hierarchical Data Format. HDF5 uses a file directory to organize data within that file and ensure long-term access to the large amounts of data stored within the file. Loading a model on your own machine just requires you to have tensorflow and keras installed. Versions of tensorflow >= 1.14.0 will work just fine. 
+Our ConvNet is saved to a HDF5 file, thanks to Keras. HDF stands for Hierarchical Data Format. HDF5 uses a file directory to organize data within that file and ensure long-term access to the large amounts of data stored within the file. Loading a model on your own machine just requires you to have tensorflow and keras installed. Versions of tensorflow >= 1.14.0 will work just fine. 
 
-Each model has been saved using tensorflow's model.save method. The model's weights, architecture, and training configuration has all been stored in one file. The original source code to re-create the model is not required as loading the model using the below statements below is sufficient.  
+The model has been saved using tensorflow's model.save method. The model's weights, architecture, and training configuration has all been stored in one file. The original source code to re-create the model is not required as loading the model using the below statements below is sufficient.  
 
 Here are some quick and easy steps to load the model:
 1) Import keras and tensorflow libraries 
-2) new_model = tf.keras.models.load_model("Model 1-32x3-CNN_v2.hdf5") or ('Model 2-32x3-DNN.hdf5')
+2) new_model = tf.keras.models.load_model("Model 1-32x3-CNN_v4.hdf5")
 3) new_model.summary() # View the layers and parameters of either model
 4) call new_model.fit to train the model on data of your choice
 
