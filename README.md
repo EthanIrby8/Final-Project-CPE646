@@ -1,4 +1,4 @@
-# Natural Image Classification - DNN
+# Natural Image Classification - ConvNet
 Improving model learning to accurately predict respiratory illness
 
 ## Table of Contents 
