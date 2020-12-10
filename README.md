@@ -36,14 +36,7 @@ After training for only 20 epochs, "Model 1" reached a training accuracy of ~96.
 
 Running a confusion matrix provided the necessary metrics needed to assess how the model learned our data. Almost all test images were being classified as belonging to a single class which is clearly a problem. Nearly 2,500 more images belonged to class 'PNEUMONIA' compared to its counterpart. Thus, we performed under-sampling to achieve an even distribution of data across both classes. Since the model trained for only 20 epochs, we were unable to observe a convergence to a perfect 'true positive' score. However, the model was defintely trending in the right direction. 
 
-In order to improve model robustness, l1 regularization was added to two convolutional layers. This will penalize large weights propagating through the network. Maintaining low computational power needed for this particular image classification is of up-most importance.    
-
-"Model 2" (DNN)
-insert image of model summary
-
-
-
-
+In order to improve model robustness, l1 regularization was added to two convolutional layers. This will penalize large weights propagating through the network. Maintaining low computational power needed for this particular image classification task is of up-most importance.     
 
 ### Compile and Run
 
@@ -57,5 +50,5 @@ Here are some quick and easy steps to load the model:
 3) new_model.summary() # View the layers and parameters of either model
 4) call new_model.fit to train the model on data of your choice
 
-Since the optimizer and its state are saved as well, training will restart from where it left off. Make predictions and evaluate the model on images of your choosing.   
+Since the optimizer and its state are saved as well, training will restart from where training left off. Make predictions and evaluate the model on images of your choosing. Also, make sure to train for more than 20 epochs as convergence towards a high test accuracy is right around the corner.   
 
