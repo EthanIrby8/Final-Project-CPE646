@@ -26,9 +26,9 @@ The chest x-ray is of a patient labeled as having pneumonia. Notice the white fo
 
 Once all of the data had been loaded and processed to satisfy Keras API requirements (see https://keras.io/api/models/model/), model development went underway. The first model aligned with a convolutional neural network (CNN) structure. The goal here was to devise a traditional CNN that boasted several layers without too much overfitting reduction algorithms applied. Many studies typically use convolutional neural networks for detecting and classifying lung disease cases using chest x-ray images. Since this is the case, a CNN was constructed as a base-model to which a smaller and fully connected model can be compared against based upon accuracy and loss metrics.  
 
-"Model 1" (CNN)
+"Mode 1"(ConvNet)
 
-<img width="599" alt="Screen Shot 2020-12-09 at 11 00 51 AM" src="https://user-images.githubusercontent.com/63656931/101654712-ab618d80-39f5-11eb-9b26-fad4e94862c0.png">
+<img width="598" alt="Screen Shot 2020-12-10 at 2 39 26 PM" src="https://user-images.githubusercontent.com/63656931/101821177-77ad6300-3adc-11eb-90cc-570405e932bb.png">
 
 "Model 1" achieved a training accuracy ~98.5% and a validation accuracy of ~79.75%. The major difference in accuracies is an indicator that the model has over-fit to the training data. 
 
