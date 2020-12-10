@@ -34,9 +34,9 @@ Once all of the data had been loaded and processed to satisfy Keras API requirem
 
 <img width="185" alt="Screen Shot 2020-12-09 at 12 39 22 PM" src="https://user-images.githubusercontent.com/63656931/101665978-7f003e00-3a02-11eb-957b-0ab0716422ee.png">
 
-The confusion matrix above connects the model performance to it's real-life implications. The bottom right box in the matrix represents the number of correct 'true negative' classifications. Meaning, a given image was classified as not belonging to the other class. A 'NORMAL' x-ray is not a 'PNEUMONIA' x-ray. 
+Running a confusion matrix provided the necessary metrics needed to assess how the model learned our data. Almost all test images were being classified as belonging to a single class which is clearly a problem. Nearly 2,500 more images belonged to class 'PNEUMONIA' compared to its counterpart. Thus, we performed under-sampling to achieve an even distribution of data across both classes. 
 
-In order to achieve a robust model with less layers and susceptibility to overfitting, a dense neural network is constructed. A few changes to note first. To improve model performance with some hyper-parameter tuning, l2 regularization is added to two dense layers. This should help with penalizing the large number of weights being passed through the network, subsequently taming the amount of computational power. Additionally, dropout layers are placed in between dense layers to shutdown randomly picked nodes within the hidden layers of the network. This technique helps in reducing the risk of the model overfitting the training data. The dense neural network is referred to as "Model 2".   
+In order to improve model robustness, l1 regularization was added to two convolutional layers. This will penalize large weights propagating through the network. Maintaining low computational power needed for this particular image classification is of up-most importance.    
 
 "Model 2" (DNN)
 insert image of model summary
