@@ -32,9 +32,9 @@ Once all of the data had been loaded and processed to satisfy Keras API requirem
 
 "Model 1" achieved a training accuracy ~98.5% and a validation accuracy of ~79.75%. The major difference in accuracies is an indicator that the model has over-fit to the training data. 
 
-<img width="185" alt="Screen Shot 2020-12-09 at 12 39 22 PM" src="https://user-images.githubusercontent.com/63656931/101665978-7f003e00-3a02-11eb-957b-0ab0716422ee.png">
+<img width="184" alt="Screen Shot 2020-12-10 at 2 46 11 PM" src="https://user-images.githubusercontent.com/63656931/101821817-5731d880-3add-11eb-9e2c-58b568730a5f.png">
 
-Running a confusion matrix provided the necessary metrics needed to assess how the model learned our data. Almost all test images were being classified as belonging to a single class which is clearly a problem. Nearly 2,500 more images belonged to class 'PNEUMONIA' compared to its counterpart. Thus, we performed under-sampling to achieve an even distribution of data across both classes. 
+Running a confusion matrix provided the necessary metrics needed to assess how the model learned our data. Almost all test images were being classified as belonging to a single class which is clearly a problem. Nearly 2,500 more images belonged to class 'PNEUMONIA' compared to its counterpart. Thus, we performed under-sampling to achieve an even distribution of data across both classes. Since the model trained for only 20 epochs, we were unable to observe a convergence to a perfect 'true positive' score. However, the model was defintely trending in the right direction. 
 
 In order to improve model robustness, l1 regularization was added to two convolutional layers. This will penalize large weights propagating through the network. Maintaining low computational power needed for this particular image classification is of up-most importance.    
 
