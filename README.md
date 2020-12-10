@@ -50,5 +50,5 @@ Here are some quick and easy steps to load the model:
 3) new_model.summary() # View the layers and parameters of either model
 4) call new_model.fit to train the model on data of your choice
 
-Since the optimizer and its state are saved as well, training will restart from where training left off. Make predictions and evaluate the model on images of your choosing. Also, make sure to train for more than 20 epochs as convergence towards a high test accuracy is right around the corner.   
+Since the optimizer and its state are saved as well, training will restart from where training left off. Make predictions and evaluate the model on images of your choosing. Also, it is important to train for more than 20 epochs as convergence towards a higher test accuracy is right around the corner.   
 
