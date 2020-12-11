@@ -44,12 +44,6 @@ The entire model is saved to a HDF5 file, thanks to Keras. HDF stands for Hierar
 
 The model has been saved using tensorflow's model.save method. The model's weights, architecture, and training configuration has all been stored in one file. The original source code to re-create the model is not required as loading the model using the below statements below is sufficient.  
 
-Here are some quick and easy steps to load the model:
-1) Import keras and tensorflow libraries 
-2) new_model = tf.keras.models.load_model("Model 1-32x3-CNN_v4.hdf5")
-3) new_model.summary() # View the layers and parameters of either model
-4) call new_model.fit to train the model on data of your choice
-
 Since the optimizer and its state are saved as well, training will restart from where training left off. Make predictions and evaluate the model on images of your choosing. Also, it is important to train for more than 20 epochs as convergence towards a higher test accuracy is right around the corner.   
 
 Here are some links attached below to the data and journal articles referenced:
