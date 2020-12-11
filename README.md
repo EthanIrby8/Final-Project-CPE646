@@ -1,5 +1,5 @@
 # Natural Image Classification - ConvNet
-Deploying ConvNet model structure to accurately predict respiratory illness
+Deploying ConvNet models to accurately predict respiratory illness
 
 ## Table of Contents 
 - Brief Introduction
