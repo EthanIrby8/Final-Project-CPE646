@@ -32,9 +32,11 @@ Once all of the data had been loaded and processed to satisfy Keras API requirem
 
 After training for only 20 epochs, "Model 1" reached a training accuracy of ~96.6% and a validation accuracy of ~90.65%. 
 
-<img width="184" alt="Screen Shot 2020-12-10 at 2 46 11 PM" src="https://user-images.githubusercontent.com/63656931/101821817-5731d880-3add-11eb-9e2c-58b568730a5f.png">
+<img width="185" alt="Screen Shot 2020-12-09 at 12 39 22 PM" src="https://user-images.githubusercontent.com/63656931/101949177-089d4080-3ba8-11eb-97fd-6b1cdbab7090.png">
 
-Running a confusion matrix provided the necessary metrics needed to assess how the model learned our data. Almost all test images were being classified as belonging to a single class which is clearly a problem. Nearly 2,500 more images belonged to class 'PNEUMONIA' compared to its counterpart. Thus, we performed under-sampling to achieve an even distribution of data across both classes. Since the model trained for only 20 epochs, we were unable to observe a convergence to a perfect 'true positive' score. However, the model was defintely trending in the right direction. 
+Running a confusion matrix provided the necessary metrics needed to assess how the model learned our data. Almost all test images were being classified as belonging to a single class which is clearly a problem (refer to matrix above). Nearly 2,500 more images belonged to class 'PNEUMONIA' compared to its counterpart. Thus, we performed under-sampling to achieve an even distribution of data across both classes. Since the model trained for only 20 epochs, we were unable to observe a convergence to a perfect 'true positive' score. However, the model was defintely trending in the right direction as the confusion matrix helps to understand the better class separability (confusion matrix below). 
+
+<img width="184" alt="Screen Shot 2020-12-10 at 2 46 11 PM" src="https://user-images.githubusercontent.com/63656931/101821817-5731d880-3add-11eb-9e2c-58b568730a5f.png">
 
 In order to improve model robustness, L1 regularization was added to two convolutional layers. This will penalize large weights propagating through the network. Maintaining low computational power needed for this particular image classification task is of up-most importance.     
 
