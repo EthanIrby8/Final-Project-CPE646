@@ -57,8 +57,6 @@ https://www.sciencedirect.com/science/article/pii/S138650562030959X
 
 https://www.nature.com/articles/s41598-019-42557-4
 
-
-
 https://www.kaggle.com/tolgadincer/labeled-chest-xray-images
 
 https://www.kaggle.com/prashant268/chest-xray-covid19-pneumonia 
