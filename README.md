@@ -8,7 +8,7 @@ Deploying ConvNet models to accurately predict respiratory illness
 - Compile and Run
 
 ### Introduction
-This project aims to develop and test different convolutional neural network models to enhance natural image classification performance. We aim to improve performance of model prediciton likelihood of pneumonia using chest x-ray images. Minimal image preprocessing algorithms were applied with the hope of reducing computational complexity. 
+This project aims to develop and test different convolutional neural network models to enhance natural image classification performance. We aim to improve performance of model prediciton likelihood of pneumonia using chest x-ray images. Minimal image preprocessing algorithms were applied with the hope of reducing computational complexity. It was decided that binarizing the images would be the sole image preprocessing algorithm applied as pixel densities were well separated within the range of 0 to 1. 
 
 The notebook was created for submission as a Final Project to a Pattern Recognition & Classification course. All data was assembled from kaggle.com. Links to the data repositories and journal articles will be attached at the end of this document. 
 
