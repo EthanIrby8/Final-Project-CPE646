@@ -10,7 +10,7 @@ Deploying ConvNet models to accurately predict respiratory illness
 ### Introduction
 This project aims to develop and test different convolutional neural network models to enhance natural image classification performance. We aim to improve performance of model prediciton likelihood of pneumonia using chest x-ray images. Minimal image preprocessing algorithms were applied with the hope of reducing computational complexity. 
 
-The notebook was created for submission as a Final Project to a Pattern Recognition & Classification course. All data was assembled from kaggle.com. For more than a small introduction to the overview of the project, please read (pages document). Links to the data repositories and journal articles will be attached at the end of this document. 
+The notebook was created for submission as a Final Project to a Pattern Recognition & Classification course. All data was assembled from kaggle.com. Links to the data repositories and journal articles will be attached at the end of this document. 
 
 ### Technologies
 - Python 3.7
@@ -52,3 +52,10 @@ Here are some quick and easy steps to load the model:
 
 Since the optimizer and its state are saved as well, training will restart from where training left off. Make predictions and evaluate the model on images of your choosing. Also, it is important to train for more than 20 epochs as convergence towards a higher test accuracy is right around the corner.   
 
+Here are some links attached below to the data and journal articles referenced:
+https://www.sciencedirect.com/science/article/pii/S138650562030959X
+
+https://www.nature.com/articles/s41598-019-42557-4
+
+https://www.kaggle.com/tolgadincer/labeled-chest-xray-images
+https://www.kaggle.com/prashant268/chest-xray-covid19-pneumonia 
