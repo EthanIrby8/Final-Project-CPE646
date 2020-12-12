@@ -41,11 +41,9 @@ Running a confusion matrix provided the necessary metrics needed to assess how t
 
 ### Compile and Run
 
-The entire model is saved to a HDF5 file, thanks to Keras. HDF stands for Hierarchical Data Format. HDF5 uses a file directory to organize data within that file and ensure long-term access to the large amounts of data stored within the file. Loading a model on your own machine just requires you to have tensorflow and keras installed. Versions of tensorflow >= 1.14.0 will work just fine. 
+The entire model is saved to a HDF5 file, thanks to Keras. HDF stands for Hierarchical Data Format. HDF5 uses a file directory to organize data within that file and ensure long-term access to the large amounts of data stored within the file. Loading a model on your machine just requires you to have tensorflow and keras installed. Versions of tensorflow >= 1.14.0 will work just fine. 
 
-The model has been saved using tensorflow's model.save method. The model's weights, architecture, and training configuration has all been stored in one file. The original source code to re-create the model is not required as loading the model using the below statements below is sufficient.  
-
-Since the optimizer and its state are saved as well, training will restart from where training left off. Make predictions and evaluate the model on images of your choosing. Also, it is important to train for more than 5 epochs as convergence towards a higher test accuracy is right around the corner.   
+The model has been saved using tensorflow's model.save method. The model's weights, architecture, and training configuration has all been stored in one file ('Finalmodel'). The original source code to re-create the model was created for experimenting with constructing a sufficient model to train and test our data on. The notebook 'Project - CNN Classification' should be referenced for specific training results. Loading and evaluating the model should be done in the 'main' jupyter notebook. All the requirements needed to test 'Finalmodel' will be available there.  
 
 Here are some links attached below to the data and journal articles referenced:
 https://www.sciencedirect.com/science/article/pii/S138650562030959X
