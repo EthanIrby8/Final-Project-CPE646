@@ -24,11 +24,11 @@ Analyzing the available data did not take much effort as searching for potential
 
 This chest x-ray is of a patient labeled as having pneumonia. Notice the white fog that inhabits the middle of the chest. This feature is what we really want the network to detect. Notice the presence of the diaphragm occupying the bottom of the x-ray.  
 
-Once all of the data had been loaded and processed to satisfy Keras API requirements (see https://keras.io/api/models/model/), model development went underway. The first model aligned with a convolutional neural network (CNN) structure. Many studies typically use convolutional neural networks for detecting and classifying lung disease cases using chest x-ray images. Since this is the case, a CNN was constructed as a base-model to which a smaller and fully connected model can be compared against based upon accuracy and loss metrics.  
+Once all of the data had been loaded and processed to satisfy Keras API requirements (see https://keras.io/api/models/model/), model development went underway. The first model aligned with a convolutional neural network (CNN) structure. Many studies typically use deeper, more robust convolutional neural networks for detecting and classifying lung disease cases using chest x-ray images. The CNN constructed here consists of only two hidden layers where the width of each layer runs thin. 
 
 "Mode 1"(ConvNet)
 
-
+<img width="590" alt="Screen Shot 2020-12-12 at 11 43 22 AM" src="https://user-images.githubusercontent.com/63656931/101989583-47e29480-3c6f-11eb-984f-483dcd9efab9.png">
 
 After training for only 2 epochs initially, "Model 1" reached a training accuracy of ~95.02% and a validation accuracy of ~94.17%. The confusion matrix below shows a poor class separability.
 
