@@ -32,7 +32,7 @@ Once all of the data had been loaded and processed to satisfy Keras API requirem
 
 After training for only 5 epochs, "Model 1" reached a training accuracy of ~95.02% and a validation accuracy of ~94.17%. 
 
-<img width="185" alt="Screen Shot 2020-12-09 at 12 39 22 PM" src="https://user-images.githubusercontent.com/63656931/101949177-089d4080-3ba8-11eb-97fd-6b1cdbab7090.png">
+<img width="207" alt="Screen Shot 2020-12-12 at 11 37 48 AM" src="https://user-images.githubusercontent.com/63656931/101989491-a52a1600-3c6e-11eb-9802-67230b44a01a.png">
 
 Running a confusion matrix provided the necessary metrics needed to assess how the model learned our data. Almost all test images were being classified as belonging to a single class which is clearly a problem (refer to matrix above). Nearly 2,500 more images belonged to class 'PNEUMONIA' compared to its counterpart. Thus, we performed under-sampling to achieve an even distribution of data across both classes. Since the model trained for only 5 epochs, we were unable to observe a convergence towards a well-balanced 'true positive' score. However, the model was defintely trending in the right direction as the confusion matrix helps to understand the better class separability (confusion matrix below). 
 
@@ -44,7 +44,7 @@ The entire model is saved to a HDF5 file, thanks to Keras. HDF stands for Hierar
 
 The model has been saved using tensorflow's model.save method. The model's weights, architecture, and training configuration has all been stored in one file. The original source code to re-create the model is not required as loading the model using the below statements below is sufficient.  
 
-Since the optimizer and its state are saved as well, training will restart from where training left off. Make predictions and evaluate the model on images of your choosing. Also, it is important to train for more than 20 epochs as convergence towards a higher test accuracy is right around the corner.   
+Since the optimizer and its state are saved as well, training will restart from where training left off. Make predictions and evaluate the model on images of your choosing. Also, it is important to train for more than 5 epochs as convergence towards a higher test accuracy is right around the corner.   
 
 Here are some links attached below to the data and journal articles referenced:
 https://www.sciencedirect.com/science/article/pii/S138650562030959X
