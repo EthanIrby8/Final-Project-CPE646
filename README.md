@@ -24,19 +24,20 @@ Analyzing the available data did not take much effort as searching for potential
 
 This chest x-ray is of a patient labeled as having pneumonia. Notice the white fog that inhabits the middle of the chest. This feature is what we really want the network to detect. Notice the presence of the diaphragm occupying the bottom of the x-ray.  
 
-Once all of the data had been loaded and processed to satisfy Keras API requirements (see https://keras.io/api/models/model/), model development went underway. The first model aligned with a convolutional neural network (CNN) structure. Many studies typically use convolutional neural networks for detecting and classifying lung disease cases using chest x-ray images. Since this is the case, a CNN was constructed as a base-model to which a smaller and fully connected model can be compared against based upon accuracy and loss metrics.  
+Once all of the data had been loaded and processed to satisfy Keras API requirements (see https://keras.io/api/models/model/), model development went underway. The first model aligned with a convolutional neural network (CNN) structure. Many studies typically use deeper, more robust convolutional neural networks for detecting and classifying lung disease cases using chest x-ray images. The CNN constructed here consists of only two hidden layers where the width of each layer runs thin. 
 
 "Mode 1"(ConvNet)
 
-<img width="598" alt="Screen Shot 2020-12-10 at 2 39 26 PM" src="https://user-images.githubusercontent.com/63656931/101821177-77ad6300-3adc-11eb-90cc-570405e932bb.png">
+<img width="590" alt="Screen Shot 2020-12-12 at 11 43 22 AM" src="https://user-images.githubusercontent.com/63656931/101989583-47e29480-3c6f-11eb-984f-483dcd9efab9.png">
 
-After training for only 20 epochs, "Model 1" reached a training accuracy of ~96.6% and a validation accuracy of ~90.65%. 
+After training for only 2 epochs initially, "Model 1" reached a training accuracy of ~95.02% and a validation accuracy of ~94.17%. The confusion matrix below shows a poor class separability.
 
-<img width="185" alt="Screen Shot 2020-12-09 at 12 39 22 PM" src="https://user-images.githubusercontent.com/63656931/101949177-089d4080-3ba8-11eb-97fd-6b1cdbab7090.png">
+<img width="184" alt="Screen Shot 2020-12-10 at 2 46 11 PM" src="https://user-images.githubusercontent.com/63656931/101989526-e91d1b00-3c6e-11eb-81f3-230eaf0ee9b2.png">
 
-Running a confusion matrix provided the necessary metrics needed to assess how the model learned our data. Almost all test images were being classified as belonging to a single class which is clearly a problem (refer to matrix above). Nearly 2,500 more images belonged to class 'PNEUMONIA' compared to its counterpart. Thus, we performed under-sampling to achieve an even distribution of data across both classes. Since the model trained for only 20 epochs, we were unable to observe a convergence to a perfect 'true positive' score. However, the model was defintely trending in the right direction as the confusion matrix helps to understand the better class separability (confusion matrix below). 
 
-<img width="184" alt="Screen Shot 2020-12-10 at 2 46 11 PM" src="https://user-images.githubusercontent.com/63656931/101821817-5731d880-3add-11eb-9e2c-58b568730a5f.png">
+Running a confusion matrix provided the necessary metrics needed to assess how the model learned our data. Almost all test images were being classified as belonging to a single class which is clearly a problem (refer to matrix above). Nearly 2,500 more images belonged to class 'PNEUMONIA' compared to its counterpart. Thus, we performed under-sampling to achieve an even distribution of data across both classes. Since the model trained for only 5 epochs, we were unable to observe a convergence towards a well-balanced 'true positive' score. However, the model was defintely trending in the right direction as the confusion matrix helps to understand the better class separability (confusion matrix below). 
+
+<img width="207" alt="Screen Shot 2020-12-12 at 11 37 48 AM" src="https://user-images.githubusercontent.com/63656931/101989491-a52a1600-3c6e-11eb-9802-67230b44a01a.png">
 
 ### Compile and Run
 
@@ -44,7 +45,7 @@ The entire model is saved to a HDF5 file, thanks to Keras. HDF stands for Hierar
 
 The model has been saved using tensorflow's model.save method. The model's weights, architecture, and training configuration has all been stored in one file. The original source code to re-create the model is not required as loading the model using the below statements below is sufficient.  
 
-Since the optimizer and its state are saved as well, training will restart from where training left off. Make predictions and evaluate the model on images of your choosing. Also, it is important to train for more than 20 epochs as convergence towards a higher test accuracy is right around the corner.   
+Since the optimizer and its state are saved as well, training will restart from where training left off. Make predictions and evaluate the model on images of your choosing. Also, it is important to train for more than 5 epochs as convergence towards a higher test accuracy is right around the corner.   
 
 Here are some links attached below to the data and journal articles referenced:
 https://www.sciencedirect.com/science/article/pii/S138650562030959X
