@@ -14,6 +14,7 @@ The notebook was created for submission as a Final Project to a Pattern Recognit
 
 ### Technologies
 - Python 3.7
+- OpenCV 4.4
 - Tensorflow 1.14.0
 - Keras 2.4.3
 
